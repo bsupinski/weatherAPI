@@ -1,0 +1,167 @@
+.daily img {
+  width: 75px;
+  height: 75px;
+}
+
+.hourly img {
+  width: 25px;
+  height: 25px;
+}
+
+main {
+  margin: auto;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1000px;
+  border: 1px solid blue;
+}
+
+body.day {
+  background-color: rgba(0, 255, 255, 0.331);
+  color: rgb(57, 55, 55);
+}
+
+body.night {
+  background-color: rgb(57, 55, 55);
+  color: rgb(225, 221, 221);
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+/* Location info Section */
+
+.location__info {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.location__info div {
+  margin-bottom: 0.25rem;
+}
+
+.section__title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Current Section */
+.current--wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.current--left {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.current__icon > img {
+  --img-size: clamp(8rem, 4.138rem + 19.31vw, 15rem);
+  width: var(--img-size);
+  height: var(--img-size);
+}
+
+.current__data--wrapper div {
+  margin-bottom: 0.25rem;
+}
+.current__highLow--wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.current--right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+@media (min-width: 700px) {
+  .current--wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .current--left {
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+  }
+  .current__icon img {
+  }
+
+  .current__data--wrapper {
+    position: absolute;
+    top: 65%;
+  }
+
+  .current--right {
+    width: 50%;
+    justify-content: flex-start;
+  }
+}
+
+/* Daily Section */
+
+.daily {
+  overflow: scroll;
+}
+
+.daily--wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.daily__day--wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 7rem;
+}
+
+.daily__day--icon img {
+  --size: clamp(3rem, -0.759rem + 13.793vw, 7rem);
+  width: var(--size);
+  height: var(--size);
+}
+
+.daily__day--wrapper div {
+  margin-bottom: 0.25rem;
+}
+
+.daily__temp--wrapper {
+  display: flex;
+  width: 100%;
+  min-width: 100px;
+  justify-content: space-between;
+}
+
+/* Hourly Section */
+
+.hourly {
+  overflow: scroll;
+}
+
+.hourly__table {
+  width: 100%;
+}
+
+.hourly__hour {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}

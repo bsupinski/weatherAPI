@@ -4,351 +4,315 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css" />
     <title>Weather API</title>
   </head>
-  <body>
-    <header class="location__info">
-      <div class="location__info--left">
-        <div class="location_info_city">Coventry</div>
-        <div class="location__info_state">Rhode Island</div>
-        <div class="location__info_country">United States</div>
-      </div>
-      <div class="location__info--right">
-        <div class="location__info_day">Thursday</div>
-        <div class="location___info_date">12/12/2023</div>
-      </div>
-    </header>
-    <section class="current">
-      <h2 class="current--section section__title">Current</h2>
-      <div class="current--wrapper">
-        <div class="current--left">
-          <div class="current__icon"><img src="icons/Clear1.svg" alt=""></div>
-          <div class="current__weather">Sunny</div>
-          <div class="current__temp">72&deg;</div>
-          <div class="current__feels-like-temp">Feels like 82&deg;</div>
-          <div class="current__today-high">H: 85&deg;</div>
-          <div class="current__today-low">L: 68&deg;</div>
+  <body class="night">
+    <main>
+      <section class="location__info">
+        <div class="location__info--left">
+          <div class="location_info_city">Coventry</div>
+          <div class="location__info_state">Rhode Island</div>
+          <div class="location__info_country">United States</div>
         </div>
-        <div class="current--right">
-          <div class="current__info--wrapper info-wrapper">
-            <div class="current__info__wind info-label">Wind</div>
-            <div class="current__info__wind--speed info-data">4.5mph</div>
-            <div class="current__info__wind--direction info-data">North</div>
+        <div class="location__info--right">
+          <div class="location__info__day">Thursday</div>
+          <div class="location__info__time">12:22PM</div>
+          <div class="location___info__date">12/12/2023</div>
+        </div>
+      </section>
+      <section class="current">
+        <h2 class="current--section section__title">Current</h2>
+        <div class="current--wrapper">
+          <div class="current--left">
+            <div class="current__icon"><img src="icons/Clear1.svg" alt=""></div>
+            <div class="current__data--wrapper">
+              <div class="current__weather">Sunny</div>
+              <div class="current__temp">72&deg;</div>
+              <div class="current__feels-like-temp">FL-Temp: 82&deg;</div>
+              <div class="current__highLow--wrapper">
+                <div class="current__high">H: 85&deg;</div>
+                <div class="current__low">L: 68&deg;</div>
+              </div>
+            </div>
           </div>
+          <div class="current--right">
+            <div class="current__info--wrapper info-wrapper">
+              <div class="current__info__wind info-label">Wind</div>
+              <div class="current__info__wind--speed info-data">4.5mph</div>
+              <div class="current__info__wind--direction info-data">North</div>
+            </div>
 
-          <div class="current__info--wrapper info-wrapper">
-            <div class="current__info__gust info-label">Gust</div>
-            <div class="current__info__gust--speed info-data">4.5mph</div>
-          </div>
+            <div class="current__info--wrapper info-wrapper">
+              <div class="current__info__gust info-label">Gust</div>
+              <div class="current__info__gust--speed info-data">4.5mph</div>
+            </div>
 
-          <div class="current__info--wrapper info-wrapper">
-            <div class="current__info__visibility info-label">Visibility</div>
-            <div class="current__info__visibility--distance info-data">
-              9miles
+            <div class="current__info--wrapper info-wrapper">
+              <div class="current__info__visibility info-label">Visibility</div>
+              <div class="current__info__visibility--distance info-data">
+                9miles
+              </div>
+            </div>
+
+            <div class="current__info--wrapper info-wrapper">
+              <div class="current__info__precip info-label">Precipitation</div>
+              <div class="current__info__precip info-data">20</div>
+            </div>
+            <div class="current__info--wrapper info-wrapper">
+              <div class="current__info__air-quality info-label">Air Quality</div>
+              <div class="current__info__air-quality info-data">Good</div>
             </div>
           </div>
 
-          <div class="current__info--wrapper info-wrapper">
-            <div class="current__info__precip info-label">Precipitation</div>
-            <div class="current__info__precip info-data">20</div>
           </div>
         </div>
-
-          <div class="current__info--wrapper info-wrapper">
-            <div class="current__info__air-quality info-label">Air Quality</div>
-            <div class="current__info__air-quality info-data">Good</div>
+      </section>
+  
+      <section class="daily">
+        <h2 class="daily--section section__title">Five Day</h2>
+        <div class="daily--wrapper">
+          <div class="daily__day--wrapper">
+            <div class="daily__day--icon"><img src="icons/Fog0.svg" alt=""></div>
+            <div class="daily__weather">Cloudy</div>
+            <div class="daily__temp--wrapper">
+              <div class="daily__temp__high">H: 72&deg;</div>
+              <div class="daily__temp__low">L:62&deg;</div>
+            </div>
+           
+          </div>
+  
+          <div class="daily__day--wrapper">
+            <div class="daily__day--icon"><img src="icons/Fog0.svg" alt=""></div>
+            <div class="daily__weather">Cloudy</div>
+            <div class="daily__temp--wrapper">
+              <div class="daily__temp__high">H: 72&deg;</div>
+              <div class="daily__temp__low">L:62&deg;</div>
+            </div>
+           
+          </div>
+  
+          <div class="daily__day--wrapper">
+            <div class="daily__day--icon"><img src="icons/Fog0.svg" alt=""></div>
+            <div class="daily__weather">Cloudy</div>
+            <div class="daily__temp--wrapper">
+              <div class="daily__temp__high">H: 72&deg;</div>
+              <div class="daily__temp__low">L:62&deg;</div>
+            </div>
+           
+          </div>
+  
+          <div class="daily__day--wrapper">
+            <div class="daily__day--icon"><img src="icons/Fog0.svg" alt=""></div>
+            <div class="daily__weather">Cloudy</div>
+            <div class="daily__temp--wrapper">
+              <div class="daily__temp__high">H: 72&deg;</div>
+              <div class="daily__temp__low">L:62&deg;</div>
+            </div>
+           
+          </div>
+  
+          <div class="daily__day--wrapper">
+            <div class="daily__day--icon"><img src="icons/Fog0.svg" alt=""></div>
+            <div class="daily__weather">Cloudy</div>
+            <div class="daily__temp--wrapper">
+              <div class="daily__temp__high">H: 72&deg;</div>
+              <div class="daily__temp__low">L:62&deg;</div>
+            </div>
+           
           </div>
         </div>
-      </div>
-    </section>
- 
-    <section class="daily">
-      <h2 class="daily--section section__title">Five Day</h2>
+        
+      </section>
 
-      <div class="daily__day--wrapper">
-        <div class="daily__day--icon"><img src="icons/Fog0.svg" alt=""></div>
-        <div class="daily__weather">Cloudy</div>
-        <div class="daily__temp--wrapper">
-          <div class="daily__temp__high">H: 72&deg;</div>
-          <div class="daily__temp__low">L:62&deg;</div>
-        </div>
-        <div class="daily__info--wrapper info-wrapper">
-          <div class="daily__info__wind info-label">Wind</div>
-          <div class="daily__info__wind--speed info-data">4.5mph</div>
-          <div class="daily__info__wind--direction info-data">North</div>
-        </div>
-      </div>
-
-      <div class="daily__day--wrapper">
-        <div class="daily__day--icon"><img src="icons/Fog0.svg" alt=""></div>
-        <div class="daily__weather">Cloudy</div>
-        <div class="daily__temp--wrapper">
-          <div class="daily__temp__high">H: 72&deg;</div>
-          <div class="daily__temp__low">L:62&deg;</div>
-        </div>
-        <div class="daily__info--wrapper info-wrapper">
-          <div class="daily__info__wind info-label">Wind</div>
-          <div class="daily__info__wind--speed info-data">4.5mph</div>
-          <div class="daily__info__wind--direction info-data">North</div>
-        </div>
-      </div>
-
-      <div class="daily__day--wrapper">
-        <div class="daily__day--icon"><img src="icons/Fog0.svg" alt=""></div>
-        <div class="daily__weather">Cloudy</div>
-        <div class="daily__temp--wrapper">
-          <div class="daily__temp__high">H: 72&deg;</div>
-          <div class="daily__temp__low">L:62&deg;</div>
-        </div>
-        <div class="daily__info--wrapper info-wrapper">
-          <div class="daily__info__wind info-label">Wind</div>
-          <div class="daily__info__wind--speed info-data">4.5mph</div>
-          <div class="daily__info__wind--direction info-data">North</div>
-        </div>
-      </div>
-
-      <div class="daily__day--wrapper">
-        <div class="daily__day--icon"><img src="icons/Fog0.svg" alt=""></div>
-        <div class="daily__weather">Cloudy</div>
-        <div class="daily__temp--wrapper">
-          <div class="daily__temp__high">H: 72&deg;</div>
-          <div class="daily__temp__low">L:62&deg;</div>
-        </div>
-        <div class="daily__info--wrapper info-wrapper">
-          <div class="daily__info__wind info-label">Wind</div>
-          <div class="daily__info__wind--speed info-data">4.5mph</div>
-          <div class="daily__info__wind--direction info-data">North</div>
-        </div>
-      </div>
-
-      <div class="daily__day--wrapper">
-        <div class="daily__day--icon"><img src="icons/Fog0.svg" alt=""></div>
-        <div class="daily__weather">Cloudy</div>
-        <div class="daily__temp--wrapper">
-          <div class="daily__temp__high">H: 72&deg;</div>
-          <div class="daily__temp__low">L:62&deg;</div>
-        </div>
-        <div class="daily__info--wrapper info-wrapper">
-          <div class="daily__info__wind info-label">Wind</div>
-          <div class="daily__info__wind--speed info-data">4.5mph</div>
-          <div class="daily__info__wind--direction info-data">North</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="hourly">
-      <h2 class="hourly--section section__title">Hourly</h2>
-      <table class="hourly__table">
-        <tr class="hourly__hour">
-          <td class="hourly__dayTime">
-            <div class="hourly__dayTime__day">Friday</div>
-            <div class="hourly__dayTime__hour">2:00pm</div>
-          </td>
-          <td class="hourly__weather">
-            <div class="hourly__weather--icon"><img src="icons/Heavy rain0.svg" alt=""></div>
-            <div class="hourly__weather--current">Heavy Rain</div>
-          </td>
-          <td class="hourly__temp">
-            <div class="hourly__temp--label info-label">Temp</div>
-            <div class="hourly__temp--temp info-data">56&deg;</div>
-          </td>
-          <td class="hourly__fl-temp">
-            <div class="hourly__fl-temp--label info-label">FL Temp</div>
-            <div class="hourly__fl-temp--temp info-data">56&deg;</div>
-          </td>
-          <td class="hourly__wind">
-            <div class="hourly__wind--label info-label">Wind</div>
-            <div class="hourly__wind--speed info-data">7mph;</div>
-          </td>
-          <td class="hourly__precip">
-            <div class="hourly__precip--label info-label">Precipitation</div>
-            <div class="hourly__precip--precip info-data">30</div>
-          </td>
-        </tr>
-        <tr class="hourly__hour">
-          <td class="hourly__dayTime">
-            <div class="hourly__dayTime__day">Friday</div>
-            <div class="hourly__dayTime__hour">2:00pm</div>
-          </td>
-          <td class="hourly__weather">
-            <div class="hourly__weather--icon"><img src="icons/Heavy rain0.svg" alt=""></div>
-            <div class="hourly__weather--current">Heavy Rain</div>
-          </td>
-          <td class="hourly__temp">
-            <div class="hourly__temp--label info-label">Temp</div>
-            <div class="hourly__temp--temp info-data">56&deg;</div>
-          </td>
-          <td class="hourly__fl-temp">
-            <div class="hourly__fl-temp--label info-label">FL Temp</div>
-            <div class="hourly__fl-temp--temp info-data">56&deg;</div>
-          </td>
-          <td class="hourly__wind">
-            <div class="hourly__wind--label info-label">Wind</div>
-            <div class="hourly__wind--speed info-data">7mph;</div>
-          </td>
-          <td class="hourly__precip">
-            <div class="hourly__precip--label info-label">Precipitation</div>
-            <div class="hourly__precip--precip info-data">30</div>
-          </td>
-        </tr>
-        <tr class="hourly__hour">
-          <td class="hourly__dayTime">
-            <div class="hourly__dayTime__day">Friday</div>
-            <div class="hourly__dayTime__hour">2:00pm</div>
-          </td>
-          <td class="hourly__weather">
-            <div class="hourly__weather--icon"><img src="icons/Heavy rain0.svg" alt=""></div>
-            <div class="hourly__weather--current">Heavy Rain</div>
-          </td>
-          <td class="hourly__temp">
-            <div class="hourly__temp--label info-label">Temp</div>
-            <div class="hourly__temp--temp info-data">56&deg;</div>
-          </td>
-          <td class="hourly__fl-temp">
-            <div class="hourly__fl-temp--label info-label">FL Temp</div>
-            <div class="hourly__fl-temp--temp info-data">56&deg;</div>
-          </td>
-          <td class="hourly__wind">
-            <div class="hourly__wind--label info-label">Wind</div>
-            <div class="hourly__wind--speed info-data">7mph;</div>
-          </td>
-          <td class="hourly__precip">
-            <div class="hourly__precip--label info-label">Precipitation</div>
-            <div class="hourly__precip--precip info-data">30</div>
-          </td>
-        </tr>
-        <tr class="hourly__hour">
-          <td class="hourly__dayTime">
-            <div class="hourly__dayTime__day">Friday</div>
-            <div class="hourly__dayTime__hour">2:00pm</div>
-          </td>
-          <td class="hourly__weather">
-            <div class="hourly__weather--icon"><img src="icons/Heavy rain0.svg" alt=""></div>
-            <div class="hourly__weather--current">Heavy Rain</div>
-          </td>
-          <td class="hourly__temp">
-            <div class="hourly__temp--label info-label">Temp</div>
-            <div class="hourly__temp--temp info-data">56&deg;</div>
-          </td>
-          <td class="hourly__fl-temp">
-            <div class="hourly__fl-temp--label info-label">FL Temp</div>
-            <div class="hourly__fl-temp--temp info-data">56&deg;</div>
-          </td>
-          <td class="hourly__wind">
-            <div class="hourly__wind--label info-label">Wind</div>
-            <div class="hourly__wind--speed info-data">7mph;</div>
-          </td>
-          <td class="hourly__precip">
-            <div class="hourly__precip--label info-label">Precipitation</div>
-            <div class="hourly__precip--precip info-data">30</div>
-          </td>
-        </tr>
-        <tr class="hourly__hour">
-          <td class="hourly__dayTime">
-            <div class="hourly__dayTime__day">Friday</div>
-            <div class="hourly__dayTime__hour">2:00pm</div>
-          </td>
-          <td class="hourly__weather">
-            <div class="hourly__weather--icon"><img src="icons/Heavy rain0.svg" alt=""></div>
-            <div class="hourly__weather--current">Heavy Rain</div>
-          </td>
-          <td class="hourly__temp">
-            <div class="hourly__temp--label info-label">Temp</div>
-            <div class="hourly__temp--temp info-data">56&deg;</div>
-          </td>
-          <td class="hourly__fl-temp">
-            <div class="hourly__fl-temp--label info-label">FL Temp</div>
-            <div class="hourly__fl-temp--temp info-data">56&deg;</div>
-          </td>
-          <td class="hourly__wind">
-            <div class="hourly__wind--label info-label">Wind</div>
-            <div class="hourly__wind--speed info-data">7mph;</div>
-          </td>
-          <td class="hourly__precip">
-            <div class="hourly__precip--label info-label">Precipitation</div>
-            <div class="hourly__precip--precip info-data">30</div>
-          </td>
-        </tr>
-        <tr class="hourly__hour">
-          <td class="hourly__dayTime">
-            <div class="hourly__dayTime__day">Friday</div>
-            <div class="hourly__dayTime__hour">2:00pm</div>
-          </td>
-          <td class="hourly__weather">
-            <div class="hourly__weather--icon"><img src="icons/Heavy rain0.svg" alt=""></div>
-            <div class="hourly__weather--current">Heavy Rain</div>
-          </td>
-          <td class="hourly__temp">
-            <div class="hourly__temp--label info-label">Temp</div>
-            <div class="hourly__temp--temp info-data">56&deg;</div>
-          </td>
-          <td class="hourly__fl-temp">
-            <div class="hourly__fl-temp--label info-label">FL Temp</div>
-            <div class="hourly__fl-temp--temp info-data">56&deg;</div>
-          </td>
-          <td class="hourly__wind">
-            <div class="hourly__wind--label info-label">Wind</div>
-            <div class="hourly__wind--speed info-data">7mph;</div>
-          </td>
-          <td class="hourly__precip">
-            <div class="hourly__precip--label info-label">Precipitation</div>
-            <div class="hourly__precip--precip info-data">30</div>
-          </td>
-        </tr>
-        <tr class="hourly__hour">
-          <td class="hourly__dayTime">
-            <div class="hourly__dayTime__day">Friday</div>
-            <div class="hourly__dayTime__hour">2:00pm</div>
-          </td>
-          <td class="hourly__weather">
-            <div class="hourly__weather--icon"><img src="icons/Heavy rain0.svg" alt=""></div>
-            <div class="hourly__weather--current">Heavy Rain</div>
-          </td>
-          <td class="hourly__temp">
-            <div class="hourly__temp--label info-label">Temp</div>
-            <div class="hourly__temp--temp info-data">56&deg;</div>
-          </td>
-          <td class="hourly__fl-temp">
-            <div class="hourly__fl-temp--label info-label">FL Temp</div>
-            <div class="hourly__fl-temp--temp info-data">56&deg;</div>
-          </td>
-          <td class="hourly__wind">
-            <div class="hourly__wind--label info-label">Wind</div>
-            <div class="hourly__wind--speed info-data">7mph;</div>
-          </td>
-          <td class="hourly__precip">
-            <div class="hourly__precip--label info-label">Precipitation</div>
-            <div class="hourly__precip--precip info-data">30</div>
-          </td>
-        </tr>
-        <tr class="hourly__hour">
-          <td class="hourly__dayTime">
-            <div class="hourly__dayTime__day">Friday</div>
-            <div class="hourly__dayTime__hour">2:00pm</div>
-          </td>
-          <td class="hourly__weather">
-            <div class="hourly__weather--icon"><img src="icons/Heavy rain0.svg" alt=""></div>
-            <div class="hourly__weather--current">Heavy Rain</div>
-          </td>
-          <td class="hourly__temp">
-            <div class="hourly__temp--label info-label">Temp</div>
-            <div class="hourly__temp--temp info-data">56&deg;</div>
-          </td>
-          <td class="hourly__fl-temp">
-            <div class="hourly__fl-temp--label info-label">FL Temp</div>
-            <div class="hourly__fl-temp--temp info-data">56&deg;</div>
-          </td>
-          <td class="hourly__wind">
-            <div class="hourly__wind--label info-label">Wind</div>
-            <div class="hourly__wind--speed info-data">7mph;</div>
-          </td>
-          <td class="hourly__precip">
-            <div class="hourly__precip--label info-label">Precipitation</div>
-            <div class="hourly__precip--precip info-data">30</div>
-          </td>
-        </tr>
-      </table>
-    </section>
+      <section class="hourly">
+        <h2 class="hourly--section section__title">Hourly</h2>
+        <table class="hourly__table">
+          <tr class="hourly__hour">
+            <td class="hourly__dayTime">
+              <div class="hourly__dayTime__day">Friday</div>
+              <div class="hourly__dayTime__hour">2:00pm</div>
+            </td>
+            <td class="hourly__weather">
+              <div class="hourly__weather--icon"><img src="icons/Heavy rain0.svg" alt=""></div>
+              <div class="hourly__weather--current">Heavy Rain</div>
+            </td>
+            <td class="hourly__temp">
+              <div class="hourly__temp--label info-label">Temp</div>
+              <div class="hourly__temp--temp info-data">56&deg;</div>
+            </td>
+            <td class="hourly__fl-temp">
+              <div class="hourly__fl-temp--label info-label">FL Temp</div>
+              <div class="hourly__fl-temp--temp info-data">56&deg;</div>
+            </td>
+            <td class="hourly__wind">
+              <div class="hourly__wind--label info-label">Wind</div>
+              <div class="hourly__wind--speed info-data">7mph;</div>
+            </td>
+            <td class="hourly__precip">
+              <div class="hourly__precip--label info-label">Precipitation</div>
+              <div class="hourly__precip--precip info-data">30</div>
+            </td>
+          </tr>
+          <tr class="hourly__hour">
+            <td class="hourly__dayTime">
+              <div class="hourly__dayTime__day">Friday</div>
+              <div class="hourly__dayTime__hour">2:00pm</div>
+            </td>
+            <td class="hourly__weather">
+              <div class="hourly__weather--icon"><img src="icons/Heavy rain0.svg" alt=""></div>
+              <div class="hourly__weather--current">Heavy Rain</div>
+            </td>
+            <td class="hourly__temp">
+              <div class="hourly__temp--label info-label">Temp</div>
+              <div class="hourly__temp--temp info-data">56&deg;</div>
+            </td>
+            <td class="hourly__fl-temp">
+              <div class="hourly__fl-temp--label info-label">FL Temp</div>
+              <div class="hourly__fl-temp--temp info-data">56&deg;</div>
+            </td>
+            <td class="hourly__wind">
+              <div class="hourly__wind--label info-label">Wind</div>
+              <div class="hourly__wind--speed info-data">7mph;</div>
+            </td>
+            <td class="hourly__precip">
+              <div class="hourly__precip--label info-label">Precipitation</div>
+              <div class="hourly__precip--precip info-data">30</div>
+            </td>
+          </tr>
+          <tr class="hourly__hour">
+            <td class="hourly__dayTime">
+              <div class="hourly__dayTime__day">Friday</div>
+              <div class="hourly__dayTime__hour">2:00pm</div>
+            </td>
+            <td class="hourly__weather">
+              <div class="hourly__weather--icon"><img src="icons/Heavy rain0.svg" alt=""></div>
+              <div class="hourly__weather--current">Heavy Rain</div>
+            </td>
+            <td class="hourly__temp">
+              <div class="hourly__temp--label info-label">Temp</div>
+              <div class="hourly__temp--temp info-data">56&deg;</div>
+            </td>
+            <td class="hourly__fl-temp">
+              <div class="hourly__fl-temp--label info-label">FL Temp</div>
+              <div class="hourly__fl-temp--temp info-data">56&deg;</div>
+            </td>
+            <td class="hourly__wind">
+              <div class="hourly__wind--label info-label">Wind</div>
+              <div class="hourly__wind--speed info-data">7mph;</div>
+            </td>
+            <td class="hourly__precip">
+              <div class="hourly__precip--label info-label">Precipitation</div>
+              <div class="hourly__precip--precip info-data">30</div>
+            </td>
+          </tr>
+          <tr class="hourly__hour">
+            <td class="hourly__dayTime">
+              <div class="hourly__dayTime__day">Friday</div>
+              <div class="hourly__dayTime__hour">2:00pm</div>
+            </td>
+            <td class="hourly__weather">
+              <div class="hourly__weather--icon"><img src="icons/Heavy rain0.svg" alt=""></div>
+              <div class="hourly__weather--current">Heavy Rain</div>
+            </td>
+            <td class="hourly__temp">
+              <div class="hourly__temp--label info-label">Temp</div>
+              <div class="hourly__temp--temp info-data">56&deg;</div>
+            </td>
+            <td class="hourly__fl-temp">
+              <div class="hourly__fl-temp--label info-label">FL Temp</div>
+              <div class="hourly__fl-temp--temp info-data">56&deg;</div>
+            </td>
+            <td class="hourly__wind">
+              <div class="hourly__wind--label info-label">Wind</div>
+              <div class="hourly__wind--speed info-data">7mph;</div>
+            </td>
+            <td class="hourly__precip">
+              <div class="hourly__precip--label info-label">Precipitation</div>
+              <div class="hourly__precip--precip info-data">30</div>
+            </td>
+          </tr>
+          <tr class="hourly__hour">
+            <td class="hourly__dayTime">
+              <div class="hourly__dayTime__day">Friday</div>
+              <div class="hourly__dayTime__hour">2:00pm</div>
+            </td>
+            <td class="hourly__weather">
+              <div class="hourly__weather--icon"><img src="icons/Heavy rain0.svg" alt=""></div>
+              <div class="hourly__weather--current">Heavy Rain</div>
+            </td>
+            <td class="hourly__temp">
+              <div class="hourly__temp--label info-label">Temp</div>
+              <div class="hourly__temp--temp info-data">56&deg;</div>
+            </td>
+            <td class="hourly__fl-temp">
+              <div class="hourly__fl-temp--label info-label">FL Temp</div>
+              <div class="hourly__fl-temp--temp info-data">56&deg;</div>
+            </td>
+            <td class="hourly__wind">
+              <div class="hourly__wind--label info-label">Wind</div>
+              <div class="hourly__wind--speed info-data">7mph;</div>
+            </td>
+            <td class="hourly__precip">
+              <div class="hourly__precip--label info-label">Precipitation</div>
+              <div class="hourly__precip--precip info-data">30</div>
+            </td>
+          </tr>
+          <tr class="hourly__hour">
+            <td class="hourly__dayTime">
+              <div class="hourly__dayTime__day">Friday</div>
+              <div class="hourly__dayTime__hour">2:00pm</div>
+            </td>
+            <td class="hourly__weather">
+              <div class="hourly__weather--icon"><img src="icons/Heavy rain0.svg" alt=""></div>
+              <div class="hourly__weather--current">Heavy Rain</div>
+            </td>
+            <td class="hourly__temp">
+              <div class="hourly__temp--label info-label">Temp</div>
+              <div class="hourly__temp--temp info-data">56&deg;</div>
+            </td>
+            <td class="hourly__fl-temp">
+              <div class="hourly__fl-temp--label info-label">FL Temp</div>
+              <div class="hourly__fl-temp--temp info-data">56&deg;</div>
+            </td>
+            <td class="hourly__wind">
+              <div class="hourly__wind--label info-label">Wind</div>
+              <div class="hourly__wind--speed info-data">7mph;</div>
+            </td>
+            <td class="hourly__precip">
+              <div class="hourly__precip--label info-label">Precipitation</div>
+              <div class="hourly__precip--precip info-data">30</div>
+            </td>
+          </tr>
+          <tr class="hourly__hour">
+            <td class="hourly__dayTime">
+              <div class="hourly__dayTime__day">Friday</div>
+              <div class="hourly__dayTime__hour">2:00pm</div>
+            </td>
+            <td class="hourly__weather">
+              <div class="hourly__weather--icon"><img src="icons/Heavy rain0.svg" alt=""></div>
+              <div class="hourly__weather--current">Heavy Rain</div>
+            </td>
+            <td class="hourly__temp">
+              <div class="hourly__temp--label info-label">Temp</div>
+              <div class="hourly__temp--temp info-data">56&deg;</div>
+            </td>
+            <td class="hourly__fl-temp">
+              <div class="hourly__fl-temp--label info-label">FL Temp</div>
+              <div class="hourly__fl-temp--temp info-data">56&deg;</div>
+            </td>
+            <td class="hourly__wind">
+              <div class="hourly__wind--label info-label">Wind</div>
+              <div class="hourly__wind--speed info-data">7mph;</div>
+            </td>
+            <td class="hourly__precip">
+              <div class="hourly__precip--label info-label">Precipitation</div>
+              <div class="hourly__precip--precip info-data">30</div>
+            </td>
+          </tr>
+        </table>
+      </section>
+    </main>
   </body>
 </html>
