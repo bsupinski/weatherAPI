@@ -11,7 +11,7 @@ export const state = {
 const getLocationState = (data) => {
   const { location } = data;
   return {
-    ity: location.name,
+    city: location.name,
     state: location.region,
     country: location.country,
     day: location.localtime.split(" ")[0],

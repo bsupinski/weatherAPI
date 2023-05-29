@@ -8,13 +8,12 @@ const daysOfTheWeek = (day) => {
   if (day === "Sun") return "Sunday";
 };
 
-const currentDay = () => {
-  const date = new Date();
-  const day = date.toDateString().slice(0, 3);
-
-  return daysOfTheWeek(day);
+const getDay = (apiDate) => {
+  let localDate = new Date(apiDate).toLocaleDateString();
+  let localDay = new Date(localDate).toDateString().slice(0, 3);
+  return daysOfTheWeek(localDay);
 };
 
-const test = currentDay();
+const testDay = getDay("2023-05-29");
 
-console.log(test);
+console.log(testDay);
