@@ -4,8 +4,16 @@ export class view {
   render(data) {
     this._data = data;
     const markup = this._markup();
-    this._parentElement.insertAdjacmentHtml("afterBegin", markup);
+    this._parentElement.append(markup);
   }
+
+  _formatDate = (apiDate) => {
+    let date = new Date(apiDate);
+    date = new Date().toLocaleString("en-us", {
+      timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+    });
+    return date.split(",")[0];
+  };
 
   _daysOfTheWeek = (day) => {
     if (day === "Mon") return "Monday";
@@ -18,10 +26,20 @@ export class view {
     return day;
   };
 
+  //   _getDay(apiDate) {
+  //     let localDate = new Date(apiDate).toLocaleString("en-us", {
+  //       timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+  //     });
+  //     let localDay = new Date(localDate).toDateString().slice(0, 3);
+  //     return this._daysOfTheWeek(localDay);
+  //   }
+
   _getDay(apiDate) {
-    let localDate = new Date(apiDate).toLocaleDateString();
-    let localDay = new Date(localDate).toDateString().slice(0, 3);
-    return daysOfTheWeek(localDay);
+    let date = new Date(apiDate);
+    date = new Date(
+      date.setMinutes(date.getMinutes() + date.getTimezoneOffset())
+    );
+    return this._daysOfTheWeek(date.toString().split(" ")[0]);
   }
 
   _timeFormat = (time) => {
@@ -44,5 +62,12 @@ export class view {
   _dayNight(isDay) {
     if (isDay == 0) return "night";
     if (isDay == 1) return "day";
+  }
+
+  _createEl(el, className, text) {
+    let newElement = document.createElement(el);
+    newElement.classList.add(...className);
+    newElement.textContent = text;
+    return newElement;
   }
 }
