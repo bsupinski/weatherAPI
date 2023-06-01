@@ -16,7 +16,7 @@ class CurrentView extends view {
     const leftSide = this._createEl("div", ["current--left"], null);
     const currentIcon = this._createEl("div", ["current__icon"], null);
     const img = this._createEl("img", [null], null);
-    img.src = `../../icons/${this._weatherIconFormat(
+    img.src = `icons/${this._weatherIconFormat(
       `${this._data.current.currIcon}`
     )}.svg`;
     img.alt = "Todays current weather";
@@ -205,9 +205,7 @@ class CurrentView extends view {
         "info-data",
         `${this._airQuality(this._data.current.currentAirQuality)}`,
       ],
-      `${this._capitalizeFirstLetter(
-        this._airQuality(this._data.current.currentAirQuality)
-      )}`
+      `${this._airQuality(this._data.current.currAirQuality)}`
     );
     currentAq.append(aqLabel, aqData);
 
@@ -230,13 +228,13 @@ class CurrentView extends view {
   }
 
   _airQuality(aq) {
-    if (aq < 3) {
+    if (aq <= 3 && aq >= 1) {
       return "good";
     }
-    if (aq < 5) {
-      return "unhealthy";
+    if (aq <= 5 && aq >= 4) {
+      return "good";
     } else {
-      return "hazardous";
+      return "good";
     }
   }
 }
