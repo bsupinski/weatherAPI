@@ -26,20 +26,12 @@ export class view {
     return day;
   };
 
-  //   _getDay(apiDate) {
-  //     let localDate = new Date(apiDate).toLocaleString("en-us", {
-  //       timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-  //     });
-  //     let localDay = new Date(localDate).toDateString().slice(0, 3);
-  //     return this._daysOfTheWeek(localDay);
-  //   }
-
   _getDay(apiDate) {
     let date = new Date(apiDate);
     date = new Date(
       date.setMinutes(date.getMinutes() + date.getTimezoneOffset())
     );
-    return this._daysOfTheWeek(date.toString().split(" ")[0]);
+    return this._daysOfTheWeek(date.toString().slice(0, 3));
   }
 
   _timeFormat = (time) => {
@@ -62,6 +54,15 @@ export class view {
   _dayNight(isDay) {
     if (isDay == 0) return "night";
     if (isDay == 1) return "day";
+  }
+
+  _capitalizeFirstLetter(string) {
+    return string[0].toUpperCase() + string.slice(1);
+  }
+
+  _weatherIconFormat(weather) {
+    if (weather === "Sunny") return "Clear";
+    else return weather;
   }
 
   _createEl(el, className, text) {

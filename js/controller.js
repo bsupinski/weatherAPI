@@ -1,5 +1,6 @@
 import * as model from "./model.js";
 import localView from "./views/localView.js";
+import currentView from "./views/currentView.js";
 
 const userLocation = async function () {
   navigator.geolocation.getCurrentPosition(successCallBack, errorCallBack);
@@ -23,6 +24,7 @@ const errorCallBack = async function (error) {
 const renderWeather = () => {
   console.log(model.state.location);
   localView.render(model.state.location);
+  currentView.render(model.state);
 };
 
 window.addEventListener("load", userLocation);

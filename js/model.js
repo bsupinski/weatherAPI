@@ -25,10 +25,11 @@ const getCurrentState = (data) => {
   return {
     currIcon: `${current.condition.text}${current.is_day}`,
     currCondition: current.condition.text,
-    currtemp: parseInt(current.temp_f),
+    currTemp: parseInt(current.temp_f),
     currFlTemp: parseInt(current.feelslike_f),
     currHum: `${current.humidity}%`,
     currWindSp: parseInt(current.wind_mph),
+    currWindDir: current.wind_dir,
     currWindGust: parseInt(current.gust_mph),
     currVisi: current.vis_miles,
     currPrecip: current.precip_in,

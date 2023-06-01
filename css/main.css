@@ -208,3 +208,15 @@ body.night {
   height: var(--img-size);
   margin: auto;
 }
+
+.good {
+  color: green;
+}
+
+.unhealthy {
+  color: orange;
+}
+
+.hazardous {
+  color: red;
+}
