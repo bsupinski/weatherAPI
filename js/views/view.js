@@ -61,7 +61,7 @@ export class view {
   }
 
   _weatherIconFormat(weather) {
-    if (weather === "Sunny") return "Clear";
+    if (weather === "Sunny1") return "Clear1";
     else return weather;
   }
 

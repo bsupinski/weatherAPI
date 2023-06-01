@@ -52,8 +52,8 @@ const getFiveDayState = (data) => {
       fiveDayDate: day.date,
       fiveDayIcon: `${day.day.condition.text}${data.current.is_day}`,
       fiveDayCondition: day.day.condition.text,
-      fiveDayHigh: day.day.maxtemp_f,
-      fiveDayLow: day.day.mintemp_f,
+      fiveDayHigh: parseInt(day.day.maxtemp_f),
+      fiveDayLow: parseInt(day.day.mintemp_f),
     };
   });
 };

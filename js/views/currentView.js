@@ -205,7 +205,9 @@ class CurrentView extends view {
         "info-data",
         `${this._airQuality(this._data.current.currentAirQuality)}`,
       ],
-      `${this._airQuality(this._data.current.currAirQuality)}`
+      `${this._capitalizeFirstLetter(
+        this._airQuality(this._data.current.currAirQuality)
+      )}`
     );
     currentAq.append(aqLabel, aqData);
 
