@@ -1,4 +1,5 @@
 import * as model from "./model.js";
+import mainView from "./views/mainView.js";
 import localView from "./views/localView.js";
 import currentView from "./views/currentView.js";
 import daysView from "./views/daysView.js";
@@ -24,6 +25,7 @@ const errorCallBack = async function (error) {
 };
 
 const renderWeather = () => {
+  mainView.addClasses(model.state);
   localView.render(model.state.location);
   currentView.render(model.state);
   daysView.render(model.state.fiveDay);

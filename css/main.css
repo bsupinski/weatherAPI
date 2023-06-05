@@ -194,8 +194,12 @@ body.night {
   padding: 1rem;
 }
 
-.hourly__hour:nth-child(odd) {
+body.day .hourly__hour:nth-child(odd) {
   background-color: rgba(154, 234, 234, 0.331);
+}
+
+body.night .hourly__hour:nth-child(odd) {
+  background-color: rgba(74, 75, 75, 0.331);
 }
 
 .hourly__weather {

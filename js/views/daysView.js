@@ -40,12 +40,12 @@ class DaysView extends view {
       const dayHigh = this._createEl(
         "div",
         ["daily__temp__high"],
-        `H:${day.fiveDayHigh}`
+        `H:${day.fiveDayHigh}°`
       );
       const dayLow = this._createEl(
         "div",
         ["daily__temp__low"],
-        `H:${day.fiveDayLow}`
+        `H:${day.fiveDayLow}°`
       );
       dayTempWrapper.append(dayHigh, dayLow);
       dayWrapper.append(dayDay, dayIcon, dayWeather, dayTempWrapper);

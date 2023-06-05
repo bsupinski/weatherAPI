@@ -50,7 +50,7 @@ class HourView extends view {
       const tempData = this._createEl(
         "div",
         ["hourly__temp--temp"],
-        `${hour.hourTemp}`
+        `${hour.hourTemp}°`
       );
       tempWrapper.append(tempLabel, tempData);
       // Wind
@@ -59,7 +59,7 @@ class HourView extends view {
       const windData = this._createEl(
         "div",
         ["hourly__wind--speed"],
-        `${hour.hourWind}`
+        `${hour.hourWind}mph`
       );
       windWrapper.append(windLabel, windData);
       // Precip
@@ -72,7 +72,7 @@ class HourView extends view {
       const precipData = this._createEl(
         "div",
         ["hourly__wind--speed"],
-        `${hour.hourPrecip}`
+        `${hour.hourPrecip}in`
       );
       precipWrapper.append(precipLabel, precipData);
 

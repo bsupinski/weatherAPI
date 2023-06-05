@@ -34,6 +34,7 @@ const getCurrentState = (data) => {
     currVisi: current.vis_miles,
     currPrecip: current.precip_in,
     currAirQuality: current.air_quality["us-epa-index"],
+    currIsDayNight: current.is_day,
   };
 };
 
@@ -73,6 +74,7 @@ const getHourlyState = (data) => {
         hourTemp: parseInt(hour.temp_f),
         hourWind: parseInt(hour.wind_mph),
         hourPrecip: parseInt(hour.precip_in),
+        hourDayNight: hour.is_day,
       };
     });
 };
@@ -88,7 +90,7 @@ export const fetchWeather = async function (coords) {
     state.highLow = getCurrentHighLowState(data);
     state.fiveDay = getFiveDayState(data);
     state.hourly = getHourlyState(data);
-    console.log(state);
+    console.log(data);
   } catch (error) {
     throw error;
   }
