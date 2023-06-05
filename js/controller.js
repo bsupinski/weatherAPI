@@ -27,7 +27,7 @@ const renderWeather = () => {
   localView.render(model.state.location);
   currentView.render(model.state);
   daysView.render(model.state.fiveDay);
-  //   hoursView.render(model.state);
+  hoursView.render(model.state.hourly);
 };
 
 window.addEventListener("load", userLocation);

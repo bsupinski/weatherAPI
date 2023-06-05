@@ -191,6 +191,7 @@ body.night {
   align-items: center;
   gap: 2rem;
   margin-bottom: 1rem;
+  padding: 1rem;
 }
 
 .hourly__hour:nth-child(odd) {
@@ -198,8 +199,7 @@ body.night {
 }
 
 .hourly__weather {
-  position: relative;
-  z-index: -1;
+  min-width: 200px;
 }
 
 .hourly__weather--icon {

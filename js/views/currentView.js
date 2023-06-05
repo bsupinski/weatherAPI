@@ -13,7 +13,10 @@ class CurrentView extends view {
 
     const sectionWrapper = this._createEl("div", ["current--wrapper"], null);
 
+    // Left side
     const leftSide = this._createEl("div", ["current--left"], null);
+
+    // Icon
     const currentIcon = this._createEl("div", ["current__icon"], null);
     const img = this._createEl("img", [null], null);
     img.src = `icons/${this._weatherIconFormat(
@@ -23,11 +26,13 @@ class CurrentView extends view {
     currentIcon.append(img);
 
     const dataWrapper = this._createEl("div", ["current__data--wrapper"], null);
+    // Current Weather
     const currentWeather = this._createEl(
       "div",
       ["current__weather"],
       `${this._data.current.currCondition}`
     );
+    // Current Temp
     const currentTemp = this._createEl(
       "div",
       ["current__temp"],
@@ -36,6 +41,7 @@ class CurrentView extends view {
     dataWrapper.append(currentWeather, currentTemp);
     leftSide.append(currentIcon, dataWrapper);
 
+    // Right Side
     const rightSide = this._createEl("div", ["current--right"], null);
 
     // Fl Temp
