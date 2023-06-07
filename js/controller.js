@@ -21,11 +21,21 @@ const successCallBack = async function (position) {
 };
 
 const errorCallBack = async function (error) {
-  console.log("Hi");
+  try {
+    if ((GeolocationPositionError.code = 1)) {
+      document.getElementById("modal").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        await model.fetchWeather(mainView.getManualCoords());
+        renderWeather();
+      });
+    }
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const renderWeather = () => {
-  mainView.addClasses(model.state);
+  mainView.onLoad(model.state);
   localView.render(model.state.location);
   currentView.render(model.state);
   daysView.render(model.state.fiveDay);
