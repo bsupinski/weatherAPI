@@ -35,7 +35,7 @@ class HourView extends view {
       const weatherWrapper = this._createEl("td", ["hourly__weather"], null);
       const icon = this._createEl("div", ["hourly__weather--icon"], null);
       const img = this._createEl("img", [null], null);
-      img.src = `icons/${hour.hourIcon}.svg`;
+      img.src = `icons/${this._weatherIconFormat(hour.hourIcon)}.svg`;
       icon.append(img);
       // Condition
       const condition = this._createEl(

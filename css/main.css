@@ -4,7 +4,7 @@ body {
   font-family: "Pridi", serif;
   font-weight: 200;
   letter-spacing: 0.1ch;
-  font-size: clamp(0.75rem, 0.502rem + 1.241vw, 1.2rem);
+  font-size: clamp(0.5rem, 0.4rem + 1vw, 1.1rem);
 }
 
 /* Fonts */
@@ -134,19 +134,34 @@ body.night {
 
 /* Daily Section */
 
+.daily {
+  margin: auto;
+}
+
 .daily--wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
 }
 
 .daily__day--wrapper {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  width: 7rem;
+  width: 250px;
+  padding: 0.5rem;
+  border: 2px solid rgb(57, 55, 55);
+  border-radius: 0.5rem;
+  box-shadow: 7px 5px 5px rgba(57, 55, 55, 0.5);
+}
+
+body.night .daily__day--wrapper {
+  border: 2px solid rgb(225, 221, 221);
+  box-shadow: 7px 5px 5px rgba(225, 221, 221, 0.5);
 }
 
 .daily__day--icon img {
@@ -161,16 +176,11 @@ body.night {
 
 .daily__temp--wrapper {
   display: flex;
-  width: 100%;
-  min-width: 100px;
+  gap: 1rem;
   justify-content: space-between;
 }
 
 @media (max-width: 600px) {
-  .daily--wrapper {
-    justify-content: flex-start;
-    margin: auto;
-  }
 }
 
 /* Hourly Section */
